@@ -135,22 +135,24 @@
     </div>
   </div>
 
-  <script>
-    document.getElementById("login-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message");
+ <script>
+  document.getElementById("login-form")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message");
 
-      localStorage.setItem("access_token", "test_token");
-      message.textContent = `✅ Welcome, ${email}`;
-      message.classList.remove("text-red-500");
-      message.classList.add("text-green-600");
+    // Условно успешный вход
+    localStorage.setItem("access_token", "test_token");
+    message.textContent = `✅ Welcome, ${email}`;
+    message.classList.remove("text-red-500");
+    message.classList.add("text-green-600");
 
-      setTimeout(() => {
-        document.getElementById("login-form").classList.add("hidden");
-        document.getElementById("post-login-options").classList.remove("hidden");
-      }, 600);
-    });
-  </script>
+    // Перенаправление на страницу с формой отзыва
+    setTimeout(() => {
+      window.location.href = "/reviews.html";
+    }, 1000);
+  });
+</script>
+
 </body>
 </html>

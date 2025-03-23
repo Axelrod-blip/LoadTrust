@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Broker Reviews - LoadTrust</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .card {
+      background: linear-gradient(to bottom right, #ffffff, #f0f9ff);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-white to-cyan-100 text-text-dark min-h-screen px-4 py-10">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl font-extrabold text-primary text-center mb-10">💬 Community Broker Reviews</h1>
+    <div id="reviews-list" class="space-y-6"></div>
+  </div>
+
+  <script>
+    async function fetchReviews() {
+      try {
+        const res = await fetch('/reviews');
+        const reviews = await res.json();
+        const container = document.getElementById('reviews-list');
+
+        if (!reviews.length) {
+          container.innerHTML = '<p class="text-center text-text-light">No reviews yet. Be the first to share your experience!</p>';
+          return;
+        }
+
+        reviews.forEach(review => {
+          const card = document.createElement('div');
+          card.className = 'card p-6 rounded-2xl shadow-md';
+
+          card.innerHTML = `
+            <h2 class="text-xl font-semibold text-primary mb-1">${review.broker_name || 'Anonymous Broker'}</h2>
+            <p class="text-sm text-text-light mb-2">${review.company_name || 'Unknown Company'} — ${review.service_type || 'General'}</p>
+            <p class="mb-3 text-base text-text-dark">${review.content}</p>
+            <div class="text-sm text-text-light flex justify-between items-center">
+              <span>${review.interaction_date || 'Unknown date'}</span>
+              ${review.anonymous ? '<span>🕶 Anonymous</span>' : `<span>📧 ${review.contact || '—'}</span>`}
+            </div>
+          `;
+
+          container.appendChild(card);
+        });
+      } catch (err) {
+        document.getElementById('reviews-list').innerHTML = '<p class="text-center text-danger">❌ Failed to load reviews.</p>';
+      }
+    }
+
+    fetchReviews();
+  </script>
+</body>
+</html>

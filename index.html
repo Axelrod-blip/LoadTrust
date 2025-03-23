@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LoadTrust – Protecting Carriers in the Freight Industry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ['Inter', 'sans-serif']
+          },
+          colors: {
+            primary: '#4361ee',
+            'primary-dark': '#3a56d4',
+            secondary: '#ff6b6b',
+            'text-dark': '#2b2d42',
+            'text-light': '#6c7a89',
+            success: '#2ecc71',
+            warning: '#f39c12',
+            danger: '#e74c3c',
+          }
+        }
+      }
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-text-dark">
+
+  <!-- Header -->
+  <header class="bg-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex justify-between items-center py-5">
+        <a href="#" class="text-3xl font-extrabold tracking-tight">Load<span class="text-primary">Trust</span></a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold">
+          <a href="#features" class="hover:text-primary">Features</a>
+          <a href="#how-it-works" class="hover:text-primary">How It Works</a>
+          <a href="#map" class="hover:text-primary">Risk Map</a>
+          <a href="#testimonials" class="hover:text-primary">Testimonials</a>
+          <a href="#contact" class="hover:text-primary">Contact</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="login.html" class="px-5 py-2 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition">Log In</a>
+          <a href="register.html" class="px-6 py-3 bg-primary text-white rounded-full hover:bg-primary-dark transition-all">Sign Up</a>
+        </div>
+        <button id="hamburger-btn" class="md:hidden text-2xl">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-24 relative bg-white overflow-hidden">
+    <div class="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl -z-10"></div>
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col-reverse md:flex-row items-center gap-16">
+        <div class="md:w-1/2 text-center md:text-left">
+          <h1 class="text-5xl font-extrabold mb-6 leading-tight">The Community Built on Trust,Transparency, and Real-World Experience</h1>
+          <p class="text-lg text-text-light mb-10 max-w-lg mx-auto md:mx-0">
+            LoadTrust empowers carriers with transparent broker data, real reviews, and risk maps — helping you avoid fraud and get paid on time.
+          </p>
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="register.html" class="px-8 py-4 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-full shadow hover:scale-105 transition">
+                🚀 Get Started – It’s Free
+              </a>              
+            <a href="#how-it-works" class="px-7 py-3 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white hover:shadow-xl hover:scale-105 transition">
+              📘 Learn How It Works
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img src="https://placehold.co/600x400" alt="App preview" class="w-full max-w-lg rounded-3xl shadow-xl mx-auto hover:scale-105 transition-transform duration-300"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-4">Key Features</h2>
+        <p class="text-lg text-text-light">Tools designed to protect carriers and simplify decision-making in the freight industry.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">🔍</div>
+          <h3 class="font-bold text-xl mb-3">Broker Verification</h3>
+          <p class="text-text-light">View payment history, MC status, ratings, and more before accepting a load.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">📄</div>
+          <h3 class="font-bold text-xl mb-3">Evidence-Based Reviews</h3>
+          <p class="text-text-light">Access reviews with rate confirmations, BOLs, and other proof from real carriers.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">🗺️</div>
+          <h3 class="font-bold text-xl mb-3">Interactive Risk Map</h3>
+          <p class="text-text-light">Visualize risk zones and unreliable broker clusters along common freight corridors.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">🔐</div>
+          <h3 class="font-bold text-xl mb-3">Carrier Protection</h3>
+          <p class="text-text-light">Get alerts on high-risk brokers based on aggregated carrier reports.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">🔄</div>
+          <h3 class="font-bold text-xl mb-3">System Integration</h3>
+          <p class="text-text-light">Easily integrates with your TMS, load boards, and dispatch tools.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all h-full">
+          <div class="w-16 h-16 flex items-center justify-center bg-primary/10 text-primary text-2xl rounded-full mb-6">📊</div>
+          <h3 class="font-bold text-xl mb-3">Smart Rating System</h3>
+          <p class="text-text-light">Automated scoring based on evidence-backed metrics and communication history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- How It Works -->
+<section id="how-it-works" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-4">How LoadTrust Works</h2>
+        <p class="text-lg text-text-light">Four simple steps to protect your business and choose trusted partners.</p>
+      </div>
+  
+      <div class="space-y-20 relative">
+        <div class="absolute hidden md:block left-8 top-16 w-1 bg-primary/10 h-[calc(100%-32px)]"></div>
+  
+        <!-- Step 1 -->
+        <div class="relative flex gap-6 md:pl-20">
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-bold flex items-center justify-center z-10 shadow-lg">1</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Secure Verification</h3>
+            <p class="text-text-light">Register your DOT/MC number. We verify your company with FMCSA & SAFER data to ensure trust and safety.</p>
+          </div>
+        </div>
+  
+        <!-- Step 2 -->
+        <div class="relative flex gap-6 md:pl-20">
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-bold flex items-center justify-center z-10 shadow-lg">2</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Research Brokers</h3>
+            <p class="text-text-light">Look up brokers, read documented reviews, and assess risk factors before taking a load.</p>
+          </div>
+        </div>
+  
+        <!-- Step 3 -->
+        <div class="relative flex gap-6 md:pl-20">
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-bold flex items-center justify-center z-10 shadow-lg">3</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Make Informed Decisions</h3>
+            <p class="text-text-light">Use the LoadTrust Score and visual indicators to decide if a broker is worth working with.</p>
+          </div>
+        </div>
+  
+        <!-- Step 4 -->
+        <div class="relative flex gap-6 md:pl-20">
+          <div class="w-12 h-12 rounded-full bg-primary text-white font-bold flex items-center justify-center z-10 shadow-lg">4</div>
+          <div>
+            <h3 class="text-xl font-bold mb-2">Share Your Experience</h3>
+            <p class="text-text-light">Leave a review and upload documents to help others avoid fraud and reward great partners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24 bg-gray-50 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-4">What Carriers Say</h2>
+      <p class="text-lg text-text-light mb-10">Real broker reviews are only available to registered carriers.</p>
+  
+      <div class="bg-white rounded-3xl shadow-lg p-10 max-w-xl mx-auto">
+        <div class="text-5xl mb-4 text-primary">🔒</div>
+        <p class="text-lg text-text-light mb-6">Sign up to access verified, evidence-based reviews and broker ratings.</p>
+        <a href="register.html" class="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition shadow hover:shadow-lg">
+          Create Free Account
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Final CTA -->
+  <section class="py-24 bg-primary text-white text-center">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-4xl font-bold mb-6">Join Thousands of Protected Carriers</h2>
+        <p class="text-lg text-white/90 mb-10">Sign up today and start making smarter, safer decisions for your freight business.</p>
+        <a href="/register" class="inline-block px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-white/90 transition shadow-lg hover:scale-105">
+          🚀 Get Started Free
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-white py-10 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-text-light">
+      <p>&copy; 2025 LoadTrust. All rights reserved.</p>
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a href="#features" class="hover:text-primary">Features</a>
+        <a href="#how-it-works" class="hover:text-primary">How It Works</a>
+        <a href="#testimonials" class="hover:text-primary">Testimonials</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </footer>
+  
+  </body
+  </html>
+  
